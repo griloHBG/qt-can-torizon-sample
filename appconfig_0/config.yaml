@@ -1,0 +1,80 @@
+devices:
+    common: []
+    debug: []
+    release: []
+dockercomposefile:
+    common: ''
+    debug: ''
+    release: ''
+extraparms:
+    common:
+        cap_add: NET_ADMIN
+        network_mode: host
+    debug: {}
+    release: {}
+id: 00000000-0000-0000-0000-000000000000
+images:
+    debug: sha256:e245791ad984d105c09b3be90dedddbd07e34f54452b168babae71d60d2c5f75
+    release: ''
+imagetags:
+    debug: qt-can-simple-vscode_arm32v7-qt5-wayland-no-ssh_bullseye_debug_00000000-0000-0000-0000-000000000000
+    release: qt-can-simple-vscode_arm32v7-qt5-wayland-no-ssh_bullseye_release_00000000-0000-0000-0000-000000000000
+modificationdate: '2021-04-29T18:14:37.141648'
+networks:
+    common: []
+    debug: []
+    release: []
+platformid: arm32v7-qt5-wayland-no-ssh_bullseye
+ports:
+    common: {}
+    debug: {}
+    release: {}
+privatekey: ''
+props:
+    common:
+        appname: qt-can-simple-vscode
+        arg: ''
+        buildcommands: ''
+        buildfiles: ''
+        command: ''
+        devpackages: qtdeclarative5-dev:#%platform.debian-arch%# libegl-dev:#%platform.debian-arch%#
+            libgl-dev:#%platform.debian-arch%#
+        env: ''
+        exename: qt-can-simple-vscode
+        expose: ''
+        extrapackages: qml-module-qtquick2 qml-module-qtquick-window2 qml-module-qtquick-controls2
+            iproute2 qtvirtualkeyboard-plugin qml-module-qt-labs-folderlistmodel qml-module-qtquick-virtualkeyboard
+            can-utils qml-module-qtqml
+        language: c-cpp-nossh
+        preinstallcommands: ''
+        sdkpostinstallcommands: ''
+        sdkpreinstallcommands: ''
+        targetcommands: ''
+        targetfiles: ''
+    debug:
+        arg: 'ARG SSHUSERNAME=#%application.username%#
+
+            '
+    release: {}
+publickey: ''
+sdkimages:
+    debug: sha256:98f80cfac8eb88b0a6b5eead6eb0184a1cd77f70675328c3ac4917d763ec1c5e
+    release: ''
+sdkimagetags:
+    debug: qt-can-simple-vscode_arm32v7-qt5-wayland-no-ssh_bullseye_debug_00000000-0000-0000-0000-000000000000_sdk_image
+    release: qt-can-simple-vscode_arm32v7-qt5-wayland-no-ssh_bullseye_release_00000000-0000-0000-0000-000000000000_sdk_image
+sdksshaddress: null
+shutdownscript:
+    common: ''
+    debug: ''
+    release: ''
+startupscript:
+    common: ''
+    debug: ''
+    release: ''
+username: root
+volumes:
+    common: {}
+    debug:
+        /home/torizon/qt-can-simple-vscode: /qt-can-simple-vscode,rw
+    release: {}

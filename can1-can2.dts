@@ -1,0 +1,14 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+        compatible = "toradex,apalis_imx6q", "toradex,colibri_imx6dl", "toradex,colibri-imx6ull-wifi-eval";
+};
+
+&can1 {
+        status = "okay";
+};
+
+&can2 {
+        status = "okay";
+};

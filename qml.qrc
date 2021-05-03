@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>PositionModeScreen.qml</file>
+        <file>Led.qml</file>
+        <file>ProfilePositionModeScreen.qml</file>
+        <file>ProfileVelocityModeScreen.qml</file>
+        <file>SettingsScreen.qml</file>
+    </qresource>
+</RCC>

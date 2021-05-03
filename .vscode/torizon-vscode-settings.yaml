@@ -1,0 +1,27 @@
+label: Qt QML sample
+detail: '$(symbol-misc) Creates a basic Qt sample, with QML UI'
+tags:
+  - qt
+env:
+  AR: '%{torizon.prefix}ar'
+  AS: '%{torizon.prefix}as'
+  CC: '%{torizon.prefix}gcc'
+  CXX: '%{torizon.prefix}g++'
+  CPP: '%{torizon.prefix}cpp'
+  STRIP: '%{torizon.prefix}strip'
+  LD: '%{torizon.prefix}ld'
+  CROSS_COMPILE: '%{torizon.prefix}'
+  QMAKE: '%{torizon.prefix}qmake'
+  QT_INCLUDES: '%{torizon.qt-includepath}'
+checkfiles:
+  - ^.*\.(pro)$
+properties:
+  props:
+    common:
+      extrapackages: qml-module-qtquick2 qml-module-qtquick-window2
+      devpackages: >-
+        qtdeclarative5-dev:#%platform.debian-arch%#
+        libegl-dev:#%platform.debian-arch%# libgl-dev:#%platform.debian-arch%#
+    debug: {}
+    release: {}
+extversion: 1.3.103

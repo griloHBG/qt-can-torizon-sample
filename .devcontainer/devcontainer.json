@@ -1,0 +1,29 @@
+{
+    "name": "torizon_qt-can-simple-vscode",
+    "dockerFile": "Dockerfile",
+    "extensions": [
+        "ms-vscode.cpptools"
+    ],
+    "containerEnv": {
+        "AR": "arm-linux-gnueabihf-ar",
+        "AS": "arm-linux-gnueabihf-as",
+        "CC": "arm-linux-gnueabihf-gcc",
+        "CXX": "arm-linux-gnueabihf-g++",
+        "CPP": "arm-linux-gnueabihf-cpp",
+        "STRIP": "arm-linux-gnueabihf-strip",
+        "LD": "arm-linux-gnueabihf-ld",
+        "CROSS_COMPILE": "arm-linux-gnueabihf-",
+        "QMAKE": "arm-linux-gnueabihf-qmake",
+        "QT_INCLUDES": "/usr/include/arm-linux-gnueabihf/qt5"
+    },
+    "runArgs": [
+        "--network=host"
+    ],
+    "remoteUser": "torizon",
+    "postCreateCommand": "mkdir -p /home/torizon/.vscode-server-insiders/extensions ; mkdir -p /home/torizon/.vscode-server/extensions; ln -s /home/torizon/.torizon-extension /home/torizon/.vscode-server-insiders/extensions/toradex.torizon ; ln -s /home/torizon/.torizon-extension /home/torizon/.vscode-server/extensions/toradex.torizon ; chgrp docker /var/run/docker.sock ; true",
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.moses,target=/home/torizon/.moses,type=bind",
+        "source=//var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+        //"source=/home/grilo/.vscode/extensions/toradex.torizon-early-access-1.3.123,target=/home/torizon/.torizon-extension,type=bind"
+    ]
+}

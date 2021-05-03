@@ -1,0 +1,9 @@
+.qmake.stash
+*.o
+Makefile
+moc_*.cpp
+moc_*.h
+qrc_qml.cpp
+arquivos-qt-can-simple.tar.xz
+arquivos-qt-can-simple/
+appconfig_*/work/*
